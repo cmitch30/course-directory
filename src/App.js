@@ -13,6 +13,8 @@ import NotFound from "./components/NotFound";
 
 function App() {
   return (
+    <BrowserRouter basename="/course-directory">
+
     <div className="container">
       <Header />
       <Routes>
@@ -31,6 +33,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
