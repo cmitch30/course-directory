@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Navigate, HashRouter } from "react-router-dom";
+import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import { HTMLCourses, CSSCourses, JSCourses } from "../src/data/courses";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -12,7 +12,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/course-directory">
       <div className="container">
         <Header />
         <Routes>
@@ -37,7 +37,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
